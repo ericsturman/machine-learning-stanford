@@ -99,7 +99,13 @@ while ~isempty(email_contents)
 
 
 
-
+    match = strcmp(str, vocabList)
+    found = find(match)
+    if found > 0
+      word_indices(end + 1) = found
+    end
+    
+    
 
 
 
@@ -118,6 +124,7 @@ while ~isempty(email_contents)
     l = l + length(str) + 1;
 
 end
+word_indices = word_indices(:)
 
 % Print footer
 fprintf('\n\n=========================\n');
