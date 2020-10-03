@@ -16,8 +16,10 @@ sim = 0;
 %
 %
 
-
-
+printf("x1 %f\n",size(x1))
+printf("x2 %f\n",size(x2))
+printf("sig %f\n",size(sigma))
+sim = exp(-(sum((x1-x2).^2)/(2*(sigma^2))))
 
 
 
